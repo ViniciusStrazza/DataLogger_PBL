@@ -1,4 +1,4 @@
-# Data Logger para Monitoramento Ambiental
+# 📊 **Data Logger para Monitoramento Ambiental** 🌍
 
 Este projeto visa criar um dispositivo de registro de dados (data logger) dedicado ao monitoramento de condições ambientais em espaços controlados. O sistema monitora a temperatura, a umidade relativa do ar e a luminosidade em tempo real, armazenando essas informações em uma memória EEPROM para análises posteriores.
 
@@ -8,12 +8,26 @@ Desenvolver um dispositivo para o registro contínuo de dados ambientais, utiliz
 
 ## Funcionalidades
 
-- **Monitoramento de Temperatura**: Mede a temperatura ambiente utilizando um sensor DHT-11.
-- **Monitoramento de Umidade**: Mede a umidade relativa do ar com o sensor DHT-11.
-- **Monitoramento de Luminosidade**: Mede a intensidade da luz ambiente através de um sensor LDR.
-- **Armazenamento de Dados**: Utiliza memória EEPROM para armazenar as leituras dos sensores com timestamp.
+-  🌡️ **Monitoramento de Temperatura**: Mede a temperatura ambiente utilizando um sensor DHT-11.
+- 💧 **Monitoramento de Umidade**: Mede a umidade relativa do ar com o sensor DHT-11.
+- 💡 **Monitoramento de Luminosidade**: Mede a intensidade da luz ambiente através de um sensor LDR.
+- 🎲 **Armazenamento de Dados**: Utiliza memória EEPROM para armazenar as leituras dos sensores com timestamp.
 - **Exibição de Dados**: Mostra as leituras dos sensores em tempo real no display LCD I2C.
-- **Alerta Sonoro e Visual**: LEDs e buzzer são usados para alertar o usuário em caso de condições fora dos limites pré-estabelecidos.
+- 🔊 **Alerta Sonoro e Visual**: LEDs e buzzer são usados para alertar o usuário em caso de condições fora dos limites pré-estabelecidos.
+
+  ## Informações de Uso
+  - Ao ligar o sistema, uma animação será exibida, representando uma garrafa de vinho tombando e sendo esvaziada, enquanto o nome da empresa aparece ("CELLARIUM VINUM"). Após isso, o slogan "ADEGA DA REALEZA" é exibido.
+  - O LED RGB ficará na cor branca enquanto inicializa o sistema.
+  - Terminada a inicialização, o display passa a exibir a data e hora atuais, sendo possível alterar a tela por meio de um botão. Dessa forma, será possível visualizar os valores fornecidos pelos sensores.
+  - 🟢 O LED verde simboliza que os gatilhos estão dentro dos parâmetros.
+  - 🟣 O LED roxo simboliza uma iminência ao erro, ou seja, algum dos gatilhos está próximo a exceder o limite.
+  - 🔴 O LED vermelho simboliza que algum gatilho passou do limite.
+  - Os valores, quando fora dos limites, são gravados na memória EEPROM com data e horário, sendo possível acompanha-los no monitor serial.
+
+## Diferencial
+- O nosso código é capaz de alertar o usuário caso haja a iminência de uma anomalia nos valores recomendados.
+- Exemplo: No código, definimos o limite de temperatura máxima como 25ºC. Ao exceder a temperatura, o LED fica com Luz Vermelha.
+- Caso a temperatura esteja próxima de 25°C (A partir de 22.5ºC) o LED ficará com a Luz Roxa, indicando o usuário que algum valor está próximo de ultrapassar o limite aceitável.
   
 ## Especificações Técnicas
 
@@ -28,9 +42,11 @@ Desenvolver um dispositivo para o registro contínuo de dados ambientais, utiliz
 
 ## Níveis dos Gatilhos (Triggers)
 
-- **Temperatura**: 15°C < T < 25°C
-- **Luminosidade**: 0% < L < 30%
-- **Umidade**: 30% < U < 50%
+| Sensor        | Faixa de Gatilho   |
+|---------------|--------------------|
+| Temperatura   | 15°C a 25°C        |
+| Luminosidade  | 0% a 30%           |
+| Umidade       | 30% a 50%          |
 
 ## Lista de Materiais
 
@@ -68,15 +84,15 @@ Após o carregamento do código no Arduino:
 3. O usuário pode interagir com o dispositivo utilizando os botões para alternar entre as leituras.
 4. Quando os valores de temperatura, umidade ou luminosidade saírem da faixa definida, o sistema acionará os **alertas sonoros e visuais**.
 
-## Contribuindo
+## 🤝 Contribuindo
 
-Se desejar contribuir para este projeto, você pode seguir as etapas abaixo:
-
+Se você deseja contribuir com este projeto, siga as etapas abaixo:
 1. Faça um **fork** deste repositório.
-2. Crie uma branch para a sua melhoria ou correção (`git checkout -b feature/nova-funcionalidade`).
-3. Faça as alterações necessárias e **commit** as mudanças (`git commit -am 'Adiciona nova funcionalidade'`).
-4. Envie para o repositório remoto (`git push origin feature/nova-funcionalidade`).
+2. Crie uma branch para sua melhoria ou correção (`git checkout -b feature/nova-funcionalidade`).
+3. Faça as alterações necessárias e **commit** suas mudanças (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Envie suas alterações para o repositório remoto (`git push origin feature/nova-funcionalidade`).
 5. Abra um **pull request** para revisão.
+
 
 ## Licença
 
@@ -86,10 +102,10 @@ Este projeto está licenciado sob a **MIT License** - consulte o arquivo [LICENS
 
 Este projeto foi desenvolvido por:
 
-- **Arthur Destro;
-- **Alex Saifi de Souza;
-- **Gustavo Mauriz;
-- **Vinicius Strazza;
+*Arthur Destro*  
+*Alex Saifi de Souza*  
+*Gustavo Mauriz*  
+*Vinicius Strazza*
 
 Agradecimentos especiais a todos que contribuíram com ideias, sugestões e suporte durante o desenvolvimento.
 
