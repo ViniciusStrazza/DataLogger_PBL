@@ -59,14 +59,14 @@ Desenvolver um dispositivo para o registro contínuo de dados ambientais, utiliz
 7. **Buzzer**
 8. Protoboard, jumpers, LEDs, resistores
 
-## Instalação
+## 🔧 Instalação
 
 1. Monte o circuito utilizando a protoboard e os componentes listados na seção anterior.
 2. Conecte o **LCD 16x2 I2C** ao Arduino utilizando a interface I2C.
 3. Conecte os sensores **DHT-11** e **LDR** aos pinos do Arduino.
 4. O **RTC** também deve ser conectado ao Arduino para garantir que as leituras sejam marcadas com timestamps precisos.
 
-### Carregando o Código
+### </> Carregando o Código
 
 1. Abra o código fonte no **Arduino IDE**.
 2. Conecte o Arduino ao seu computador via cabo USB.
@@ -110,6 +110,6 @@ Este projeto foi desenvolvido por:
 Agradecimentos especiais a todos que contribuíram com ideias, sugestões e suporte durante o desenvolvimento.
 
 
-## Contato
+## 📧 Contato
 
 Caso tenha dúvidas ou sugestões sobre o projeto, entre em contato comigo por [e-mail](strazza2005@gmail.com).
